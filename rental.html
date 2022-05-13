@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car rental</title>
+	<link rel="stylesheet"type="text/css" href="./rental.css">
+</head>
+<body>
+    <header>
+		<h1>Let's get Started</h1>
+	</header>
+  
+		<section>
+			<label>Search Clients:</label>
+			<input type="text" id="name_search" onkeyup="searchClient();">
+
+			<table id="name_results">
+			</table>
+		</section>
+		<table >
+      
+                <h2>Fill in your details</h2>
+           
+            <tr>
+               <td><label for ="first_name">First Name</label></td>
+           <td><input type="text" id = "first_name" name = "f_name"value="" disabled>  </td>
+           <td><label for ="last_name">Last Name</label></td>
+           <td><input type="text" id="last_name" name="l_name" value="" disabled> </td>  
+            </tr>
+            <tr>
+                <td> <label for ="address">Address</label></td>
+                <td><input type="text" id="address" name="a_name" value="" disabled></td>  
+            </tr>
+            <tr>
+                <td><label for ="post">State</label></td>
+                    <td><input type="text" id="post" name="s_name" value="" disabled></td>
+        </tr>
+            <tr>
+                <td><label>Client Phone</label></td>
+                    <td><input type= "tel" id="client_phone" name="c_name"  value=""disabled></td>
+        </tr>
+            <tr>
+                <td><label>Client Email</label></td>
+                    <td><input type="email" id="client_email" name="e_name" value=""disabled></td>
+        </tr>	
+</table>
+<h2>Select Vehicle for Rent</h2>
+       
+<input id ="compact" type ="radio" name="c_client" value ="">
+<label for ="compact">Compact-$15</label>
+<br>
+<input id ="mid" type ="radio" name="c_client" value ="">
+<label for ="mid">Mid-Size-$20</label>
+<br>
+<input id ="lux" type ="radio" name="c_client" value ="">
+<label for ="lux">Luxury-$35</label>
+<br>
+<input id="van" type ="radio" name="c_client" value ="">
+<label for ="van" >Van/Truck-$40</label>
+<br>
+
+<div>
+	<h3>Additional Options:</h3>
+
+	<div>
+	  <input id = "c_cheese"  type = "checkbox" name = "components[]" value = "">
+	  <label for= "c_cheese">Roof Rack or Bicycle Rack -$5.00</label>
+  </div>
+  <div>
+	  <input id = "c_fruit"  type = "checkbox" name = "components[]" value = "">
+	  <label for= "c_fruit">   GPS -$10.00</label>
+  </div>
+  <div>
+	  <input id = "c_jam"  type = "checkbox" name = "components[]" value = "">
+	  <label for= "c_jam">Child Seat-free</label>
+  </div>
+</div>
+<section>
+	<label>Number of Days</label>
+	<input id="hdmi_quantity" type="number" name="hdmi_cable_amount" min="1" value="">
+</section>
+<!-- 
+		<table id="name_results">
+		</table> -->
+		<div>
+			<button onclick="submitOrder();"> <strong>Submit Order</strong></button>
+	  
+		</div>
+		<div id ="invoice">
+
+		</div>
+	<script type="text/javascript" src="./rental.js"></script>
+</body>
+</html>
